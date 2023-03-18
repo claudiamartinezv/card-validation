@@ -6,9 +6,52 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+
+    <header>
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Catálogo</a>
+        <a href="#">Suscripción</a>
+      </nav>
+    </header>
+    <main>
+      <h1>¡Bienvenid@ a Nuestra Plataforma!</h1>
+
+      <h2>Suscríbete para disfrutar de contenido exclusivo</h2>
+  
+      <form id="formTarjeta" class="formTarjeta" action="">
+        <div>
+          <h3>Ingrese los datos de su tarjeta de crédito</h3>
+        </div>
+        <br>
+        <div>
+          <label>Nombre titular:</label>
+          <input type="text" id="nombre" name="name" placeholder="Ingrese su nombre" /> 
+       </div>
+       <br>
+        <div>
+           <label>Tarjeta de crédito:</label>
+           <input type="number" id="tc"  placeholder="**** **** **** ****" /> 
+            <!--required-->
+        </div>
+        <br>
+        <div>
+          <label>Fecha vencimiento:</label>
+          <input type="date" id="fecha"/>  
+          <label>CVV:</label>
+          <input type="text">
+        </div>       
+      </form>
+
+      <button type="submit" id="btnValidar">Validar Tarjeta</button>
+
+      <br>
+
+    </main>
+    <footer>
+      <h5> Diseñado por Claudia Martínez @claumartinezv </h5>
+    </footer>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
