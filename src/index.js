@@ -1,44 +1,32 @@
 import validator from './validator.js';
 
-//Declarar variable botón 
+//Declarar e inicializar las variables
 const button = document.getElementById("btnValidar");
+let nombre = document.getElementById("nombre");
+let tarjetaCredito = document.getElementById("tarjetaCredito");
+let fecha = document.getElementById("fecha");
+let cvv = document.getElementById("cvv");
 
-var arrCreditCard = new Array();
 
-function reverseCard(){
-
-    var creditCardNumber = document.getElementById("tarjetaCredito").value;
-    arrCreditCard[arrCreditCard.length] = creditCardNumber;
+button.addEventListener("click", function(e){
+    e.preventDefault();  //Evitar que se recargue la página al tiro
+    let creditCardNumber = tarjetaCredito.value;
     
-    var reverse = creditCardNumber.reverse();
-    console.log(reverse)
-};
+    const val = validator.isValid(creditCardNumber);
 
-function multiplyCard(reverseCard){
-
+}); 
+/*
+    const mask = validator.maskify(creditCardNumber);
     
-};
 
-
-/*console.log(creditCardNumber);
-
-//Propiedad reverse es el array invertido
-const reverse = creditCardNumber.reverse();
-console.log(reverse);
-
-console.log(creditCardNumber);*/
-
-button.addEventListener("click",()=>{
-
-    validator.isValid()
-});
-
-button.addEventListener("click",()=>{
-
-    validator.maskify()
-});
-
-console.log(validator);
+    let msjValidator;
+    if(val){
+        msjValidator = "Su tarjeta " + mask + " es válida. ¡Gracias por su suscripción!"
+    } else{
+        msjValidator = "Su tarjeta " + mask + "no es válida. Intente nuevamente."   
+    }
+    alert(msjValidator);
+*/
 
 
 
@@ -46,7 +34,6 @@ console.log(validator);
 
 
 
-function newFunction() {
-    alert(reverseCard());
-}
+
+
 

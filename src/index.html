@@ -8,12 +8,13 @@
   <body>
 
     <header>
-      <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Catálogo</a>
-        <a href="#">Suscripción</a>
-      </nav>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Catálogo</a></li>
+        <li><a href="#">Suscripción</a></li>
+      </ul>
     </header>
+    
     <main>
       <h1>¡Bienvenid@ a Nuestra Plataforma!</h1>
 
@@ -25,19 +26,19 @@
         <form id="formTarjeta" class="formTarjeta" action="">
         <div>
           <label for="nombre">Nombre titular:</label>
-          <input type="text" id="nombre" placeholder="Ingrese su nombre" required/> 
+          <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required/> 
        </div>
        <br>
         <div>
            <label for="tarjetaCredito">Tarjeta de crédito:</label>
-           <input type="text" id="tarjetaCredito"  placeholder="**** **** **** ****" required/> 
+           <input type="text" id="tarjetaCredito" name="tarjetaCredito" placeholder="**** **** **** ****" required> 
         </div>
         <br>
         <div>
           <label for="fecha">Fecha vencimiento:</label>
-          <input type="month" id="fecha" required/>  
+          <input type="month" id="fecha" name="fecha" required/>  
           <label for="cvv">CVV:</label>
-          <input type="text" id="cvv" placeholder="123" size="3" required/>
+          <input type="text" id="cvv" name="cvv" placeholder="123" size="3" required/>
         </div>
         <br>
         <button type="submit" id="btnValidar">Validar Tarjeta</button>       
