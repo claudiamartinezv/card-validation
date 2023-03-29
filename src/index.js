@@ -10,12 +10,14 @@ let cvv = document.getElementById("cvv");
 
 button.addEventListener("click", function(e){
     e.preventDefault();  //Evitar que se recargue la página al tiro
+    console.log("click");
     let creditCardNumber = tarjetaCredito.value;
-    
-    const val = validator.isValid(creditCardNumber);
-
+    validator.isValid(creditCardNumber);
 }); 
+
+
 /*
+    
     const mask = validator.maskify(creditCardNumber);
     
 
