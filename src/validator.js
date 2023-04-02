@@ -1,38 +1,51 @@
 const validator ={
 
   isValid: function (creditCardNumber){
-    console.log(creditCardNumber.value, "****");
-    let numberArray = creditCardNumber.split(""); //Pasar de String a Array
-    let creditCardNumberReverse = numberArray.reverse(); //Reversar el array
-    let arrayCreditCard = [];
+
+    const numberArray = creditCardNumber.split(""); //Pasar de String a Array
+    const creditCardNumberReverse = numberArray.reverse(); //Reversar el array
+    const arrayCreditCard = [];
+    let total = 0; //Declara var para la suma de la tarjeta
 
     for (let i=0; i<creditCardNumberReverse.length; i++){ //Recorre el Array Reversado
 
-        if (i % 2 === 0) {  //i posición par
-            arrayCreditCard.push(Number(creditCardNumberReverse[i]));
-
-        } else { //i posición impar
-            (arrayCreditCard.push(creditCardNumberReverse[i]*2));
-        } 
-
-    };
-        return arrayCreditCard;
+      if (i % 2 === 0) {  
+        arrayCreditCard.push(Number(creditCardNumberReverse[i]));
+      } else {
+        const product = creditCardNumberReverse[i]*2; 
+        if(product>9){
+          const separateNumber = product.toString().split("");
+          const suma = Number(separateNumber[0]) + Number(separateNumber[1]);
+          arrayCreditCard.push(suma);
+        }
+        else{
+          arrayCreditCard.push(product);
+        }
+      } 
+      console.log(arrayCreditCard);
+      total = total + arrayCreditCard[i];  
+        
+    }
+    return total % 10 === 0;
   },
 
   //Ocultar los números de la tarjeta, excepto los últimos 4.
   maskify: function (creditCardNumber){
-    creditCardNumber = creditCardNumber.replace(/\s/g,'');
-    
+    console.log(creditCardNumber, "click");
+    const creditCardMask = creditCardNumber.replace(/\s/g,'');
+    console.log(creditCardMask);
     let maskNumber ='';
-    for (let i=0; i<creditCardNumber.lenght - 4; i++){
-      maskNumber +="*";
+    for (let i=0; i<creditCardMask.length - 4; i++){
+      console.log(creditCardMask[i]);
+      maskNumber +="#";
+      console.log(maskNumber);
     }
-    maskNumber += creditCardNumber.substring(creditCardNumber.lenght - 4);
+    maskNumber += creditCardMask.substring(creditCardMask.lenght - 4); //revisar 
+    console.log(maskNumber);
     return maskNumber;
   },
 
 }
-
-  export default validator;
+export default validator;
 
 
