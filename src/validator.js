@@ -31,16 +31,13 @@ const validator ={
 
   //Ocultar los números de la tarjeta, excepto los últimos 4.
   maskify: function (creditCardNumber){
-    console.log(creditCardNumber, "click");
     const creditCardMask = creditCardNumber.replace(/\s/g,'');
-    console.log(creditCardMask);
     let maskNumber ='';
     for (let i=0; i<creditCardMask.length - 4; i++){
       console.log(creditCardMask[i]);
       maskNumber +="#";
-      console.log(maskNumber);
     }
-    maskNumber += creditCardMask.substring(creditCardMask.lenght - 4); //revisar 
+    maskNumber += creditCardMask.substring(creditCardMask, (creditCardMask.length -4)); //revisar 
     console.log(maskNumber);
     return maskNumber;
   },
