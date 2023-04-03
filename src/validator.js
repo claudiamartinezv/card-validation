@@ -37,7 +37,7 @@ const validator ={
       console.log(creditCardMask[i]);
       maskNumber +="#";
     }
-    maskNumber += creditCardMask.substring(creditCardMask, (creditCardMask.length -4)); //revisar 
+    maskNumber += creditCardMask.substring(creditCardMask, (creditCardMask.length -4)); 
     console.log(maskNumber);
     return maskNumber;
   },

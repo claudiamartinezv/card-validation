@@ -20,7 +20,7 @@ button.addEventListener("click", function(e){ //e => event
     );
   }
   else{
-    alert("Su tarjeta n° " + mask + " no es válida ¡Intente nuevamente!");
+    alert("Su tarjeta n° " + mask + " no es válida ¡Inténtelo nuevamente!");
   }
 }); 
 
