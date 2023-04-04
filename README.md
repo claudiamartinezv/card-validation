@@ -16,9 +16,7 @@ Para validar la tarjeta de crédito en este proyecto:
 
 
 
-## Autor
 
-- [@claudiamartinezv](https://github.com/claudiamartinezv/card-validation)
 
 ## Color Referencias
 
@@ -61,7 +59,9 @@ Para ejecutar los test se debe ejecutar el siguiente comando:
 ```bash
   npm run test
 ```
+## Autor
 
+- [@claudiamartinezv](https://github.com/claudiamartinezv/card-validation)
 
 # Hola, mi nombre es Clau Martínez! 👋
 
