@@ -16,8 +16,7 @@ button.addEventListener("click", function(e){ //e => event
   console.log(val, mask);
 
   if(val === true){
-    alert("Su tarjeta n° " + mask + " es válida ¡Gracias por su suscripción!"
-    );
+    alert("Su tarjeta n° " + mask + " es válida ¡Gracias por su suscripción!");
   }
   else{
     alert("Su tarjeta n° " + mask + " no es válida ¡Inténtelo nuevamente!");

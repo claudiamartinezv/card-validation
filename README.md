@@ -1,7 +1,18 @@
 
 # Proyecto Card Validation
 
-El proyecto consiste en desarrollar una página web que permita validar tarjetas de crédito utilizando el Algoritmo de Luhn. En este caso, lo desarrollé pensando en una página de contenido en formato streaming en donde el usuario debe validar su tarjeta de crédito para suscribirse y acceder al contenido. 
+El proyecto consiste en desarrollar una página web que permita validar tarjetas de crédito utilizando el Algoritmo de Luhn. En este caso, lo desarrollé pensando en una página de contenido audiovisual en formato streaming en donde el usuario debe validar su tarjeta de crédito para suscribirse y acceder al contenido. 
+
+
+## Aplicación Proyecto
+
+Para validar la tarjeta de crédito en este proyecto:
+
+- Se debe llenar cada input del formulario y presionar el botón "Validar Tarjeta".
+-  La tarjeta se validará a través de la función isValid, en la que se aplicará el algoritmo de Luhn.
+-  Además, se realizará la función maskify en la que se enmascara los digitos de la tarjeta con "#" y sólo se muestran los últimos 4 digitos. 
+-  Si la tarjeta es válida, le aparecerá al usuario un alert con el siguiente mensaje: "Su tarjeta n° (número de la tarjeta enmascarado) es válida ¡Gracias por su suscripción!"
+-  Si la tarjeta es inválida, le aparecerá al usuario el siguiente mensaje: "Su tarjeta n° (número de la tarjeta enmascarado) no es válida ¡Inténtelo nuevamente!"
 
 
 
