@@ -3,6 +3,7 @@ body{
     text-align: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0%;
+    color: #000000;
 }
 
 header{
@@ -17,7 +18,7 @@ header{
 
 .menu li a{
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     padding: 13px;
     display:block;
 }
@@ -28,7 +29,7 @@ header{
 }
 
 .menu li a:hover{
-    background-color: coral;
+    background-color: #ff7f50;
 }
 
 main{
@@ -56,14 +57,14 @@ h4{
 
 button{
     background-color: #ff3131;
-    color: white;
+    color: #ffffff;
     padding: 5px;
     border-radius: 8px;
-    border:2px solid crimson;
+    border:2px solid #dc143c;
 }
 
 button:hover{
-    background-color: coral;
+    background-color: #ff7f50;
 
 }
   
